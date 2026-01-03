@@ -1,11 +1,9 @@
-
-
-if IY_LOADED and not _G.IY_DEBUG then
+if CA_LOADED and not _G.CA_DEBUG then
 	-- error("Authority Admin is already running!", 0)
 	return
 end
 
-pcall(function() getgenv().IY_LOADED = true end)
+pcall(function() getgenv().CA_LOADED = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
 
 function missing(t, f, fallback)
@@ -105,18 +103,18 @@ isLegacyChat = TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService
 
 -- xylex & europa
 local iyassets = {
-	["authorityadmin/assets/bindsandplugins.png"] = "rbxassetid://5147695474",
-	["infiniteyield/assets/close.png"] = "rbxassetid://5054663650",
-	["infiniteyield/assets/editaliases.png"] = "rbxassetid://5147488658",
-	["infiniteyield/assets/editkeybinds.png"] = "rbxassetid://129697930",
-	["infiniteyield/assets/edittheme.png"] = "rbxassetid://4911962991",
-	["infiniteyield/assets/editwaypoints.png"] = "rbxassetid://5147488592",
-	["infiniteyield/assets/imgstudiopluginlogo.png"] = "rbxassetid://4113050383",
-	["infiniteyield/assets/logo.png"] = "rbxassetid://1352543873",
-	["infiniteyield/assets/minimize.png"] = "rbxassetid://2406617031",
-	["infiniteyield/assets/pin.png"] = "rbxassetid://6234691350",
-	["infiniteyield/assets/reference.png"] = "rbxassetid://3523243755",
-	["infiniteyield/assets/settings.png"] = "rbxassetid://1204397029"
+	["coreadmin/assets/bindsandplugins.png"] = "rbxassetid://5147695474",
+	["coreadmin/assets/close.png"] = "rbxassetid://5054663650",
+	["coreadmin/assets/editaliases.png"] = "rbxassetid://5147488658",
+	["coreadmin/assets/editkeybinds.png"] = "rbxassetid://129697930",
+	["coreadmin/assets/edittheme.png"] = "rbxassetid://4911962991",
+	["coreadmin/assets/editwaypoints.png"] = "rbxassetid://5147488592",
+	["coreadmin/assets/imgstudiopluginlogo.png"] = "rbxassetid://4113050383",
+	["coreadmin/assets/logo.png"] = "rbxassetid://1352543873",
+	["coreadmin/assets/minimize.png"] = "rbxassetid://2406617031",
+	["coreadmin/assets/pin.png"] = "rbxassetid://6234691350",
+	["coreadmin/assets/reference.png"] = "rbxassetid://3523243755",
+	["coreadmin/assets/settings.png"] = "rbxassetid://1204397029"
 }
 
 local function getcustomasset(asset)
@@ -128,27 +126,27 @@ local function getcustomasset(asset)
 			return result
 		end
 	end
-	return iyassets[asset]
+	return aaassets[asset]
 end
 
 if makefolder and isfolder and writefile and isfile then
 	pcall(function() -- good executor trust
 		local assets = "https://raw.githubusercontent.com/infyiff/backup/refs/heads/main/"
-		for _, folder in {"infiniteyield", "infiniteyield/assets"} do
+		for _, folder in {"coreadmin", "coreadmin/assets"} do
 			if not isfolder(folder) then
 				makefolder(folder)
 			end
 		end
-		for path in iyassets do
+		for path in aaassets do
 			if not isfile(path) then
-				writefile(path, game:HttpGet((path:gsub("infiniteyield/", assets))))
+				writefile(path, game:HttpGet((path:gsub("coreadmin/", assets))))
 			end
 		end
-		if IsOnMobile then writefile("infiniteyield/assets/.nomedia", "") end
+		if IsOnMobile then writefile("coreadmin/assets/.nomedia", "") end
 	end)
 end
 
-currentVersion = "6.3.6"
+currentVersion = "1.0.2"
 
 ScaledHolder = Instance.new("Frame")
 Scale = Instance.new("UIScale")
@@ -353,7 +351,7 @@ Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.TextSize = 18
-Title.Text = "Infinite Yield FE v" .. currentVersion
+Title.Text = "Core Admin FE v" .. currentVersion
 
 do
 	local emoji = ({
