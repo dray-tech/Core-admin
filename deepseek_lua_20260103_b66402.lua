@@ -1,4 +1,4 @@
--- Core Admin Script by illremember
+-- Core Admin Script by vision
 -- Credits to infinite yield, harkinian, dex creators
 -- Version 3.0 with 200+ Commands
 
