@@ -1,5 +1,5 @@
 if CA_LOADED and not _G.CA_DEBUG then
-	-- error("Authority Admin is already running!", 0)
+	-- error("Core Admin is already running!", 0)
 	return
 end
 
