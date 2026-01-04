@@ -1,6 +1,6 @@
 -- Core Admin Ultra Edition
 -- Version 4.0 - The Ultimate Admin Script
--- By illremember
+-- By vision
 -- FIXED VERSION - All errors resolved
 
 -- 🔥 ULTRA ENHANCED FEATURES:
@@ -1223,16 +1223,16 @@ local function Initialize()
     end
     
     print("╔══════════════════════════════════════════════════╗")
-    print("║      CORE ADMIN ULTRA v4.0 - LOADED SUCCESSFULLY! ║")
-    print("║                                                  ║")
+    print("║     CORE ADMIN ULTRA v4.0 - LOADED SUCCESSFULLY ║")
+    print("║                                                 ║")
     print("║  » 100+ Advanced Commands                       ║")
     print("║  » 7 Prefix Support: / : ; , . ! ?              ║")
     print("║  » Enhanced UI with Animations                  ║")
     print("║  » Mobile Touch Support                         ║")
     print("║  » Particle Effects System                      ║")
     print("║  » Multiple Themes                              ║")
-    print("║                                                  ║")
-    print("║  Created by illremember                         ║")
+    print("║                                                 ║")
+    print("║  Created by vision                              ║")
     print("╚══════════════════════════════════════════════════╝")
 end
 
